@@ -1,5 +1,4 @@
 import { Target, Users, Zap, BookOpen } from 'lucide-react'
-import { OBJECTIVES } from '../data/events'
 
 const highlights = [
   {
@@ -28,65 +27,60 @@ export default function About() {
   return (
     <section
       id="about"
-      className="bg-black px-4 py-16 sm:py-24"
+      className="bg-white px-4 py-20 sm:px-6 sm:py-24 lg:py-32"
       aria-labelledby="about-heading"
     >
-      <div className="mx-auto max-w-7xl">
-        <div className="mx-auto max-w-3xl text-center">
-          <span className="inline-flex items-center gap-2 rounded-full border border-white/[0.06] bg-white/[0.03] px-4 py-1.5 text-xs font-medium text-gray-400">
-            About the Challenge
-          </span>
+      <div className="mx-auto max-w-6xl">
+        <div className="mx-auto max-w-2xl text-center">
           <h2
             id="about-heading"
-            className="mt-6 text-3xl font-bold tracking-tight text-white sm:text-5xl"
+            className="text-4xl font-bold tracking-tight text-[#0F172A] sm:text-5xl"
           >
-            Built by students,{' '}
-            <span className="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
-              for students
-            </span>
+            Built by students, for students
           </h2>
-          <p className="mt-6 text-lg text-gray-400">
+          <p className="mt-6 text-lg text-[#475569]">
             CODEATHON is a week-long technical innovation challenge where teams
             of college students conceive, design, and build real-world
-            software and hardware solutions. Whether you are a seasoned
-            competitive programmer or building your first project, there is
-            a place for you.
+            software and hardware solutions.
           </p>
         </div>
 
-        <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {highlights.map(({ icon: Icon, title, text }) => (
-            <article
-              key={title}
-              className="group rounded-2xl border border-white/[0.06] bg-white/[0.02] p-6 transition hover:border-cyan-400/20 hover:bg-white/[0.04]"
-            >
-              <div className="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-to-br from-cyan-500/15 to-purple-500/15 text-cyan-300">
-                <Icon className="h-6 w-6" aria-hidden="true" />
-              </div>
-              <h3 className="mt-4 text-lg font-semibold text-white">{title}</h3>
-              <p className="mt-2 text-sm text-gray-400">{text}</p>
-            </article>
-          ))}
-        </div>
+        <div className="mt-12 grid gap-8 lg:grid-cols-2 lg:gap-16">
+          <div>
+            <h3 className="text-sm font-semibold uppercase tracking-wider text-[#06b6d4]">
+              What to Expect
+            </h3>
+            <div className="mt-8 space-y-8">
+              {highlights.map(({ icon: Icon, title, text }) => (
+                <div key={title} className="flex gap-3 sm:gap-4">
+                  <div className="flex h-9 w-9 flex-none items-center justify-center rounded-lg bg-[#ecfeff] sm:h-10 sm:w-10">
+                    <Icon className="h-4 w-4 text-[#06b6d4] sm:h-5 sm:w-5" aria-hidden="true" />
+                  </div>
+                  <div>
+                    <h4 className="text-base font-semibold text-[#0F172A]">{title}</h4>
+                    <p className="mt-1 text-sm text-[#475569]">{text}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
 
-        <div className="mt-14 grid gap-8 lg:grid-cols-3">
-          <div className="lg:col-span-1">
-            <div className="rounded-2xl border border-white/[0.06] bg-gradient-to-b from-white/[0.03] to-transparent p-8">
-              <p className="text-sm font-medium uppercase tracking-wider text-cyan-300">
+          <div className="space-y-12">
+            <div>
+              <h3 className="text-sm font-semibold uppercase tracking-wider text-[#06b6d4]">
                 Our Mission
-              </p>
-              <p className="mt-4 text-gray-300">
+              </h3>
+              <p className="mt-4 text-[#475569]">
                 To democratize access to high-impact technical experiences and
                 foster a community where students learn by building.
               </p>
             </div>
-          </div>
-          <div className="lg:col-span-2">
-            <div className="rounded-2xl border border-white/[0.06] bg-white/[0.02] p-8">
-              <p className="text-sm font-medium uppercase tracking-wider text-cyan-300">
+
+            <div>
+              <h3 className="text-sm font-semibold uppercase tracking-wider text-[#06b6d4]">
                 How It Works
-              </p>
-              <ol className="mt-6 space-y-4 text-gray-300">
+              </h3>
+              <ol className="mt-4 space-y-5">
                 {[
                   ['Register a team', 'Sign up before the deadline and lock in your team name.'],
                   ['Pick a track', 'Choose from event tracks that match your skills.'],
@@ -94,12 +88,12 @@ export default function About() {
                   ['Pitch & win', 'Present to judges and compete for prizes.'],
                 ].map(([step, desc], i) => (
                   <li key={step} className="flex gap-4">
-                    <span className="flex h-8 w-8 flex-none items-center justify-center rounded-full bg-gradient-to-br from-cyan-500/15 to-purple-500/15 text-sm font-semibold text-cyan-300">
+                    <span className="flex h-7 w-7 flex-none items-center justify-center rounded-full bg-[#ecfeff] text-sm font-semibold text-[#06b6d4] sm:h-8 sm:w-8">
                       {i + 1}
                     </span>
                     <div>
-                      <p className="font-semibold text-white">{step}</p>
-                      <p className="text-sm text-gray-400">{desc}</p>
+                      <p className="font-semibold text-[#0F172A]">{step}</p>
+                      <p className="text-sm text-[#475569]">{desc}</p>
                     </div>
                   </li>
                 ))}

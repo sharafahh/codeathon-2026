@@ -1,10 +1,9 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
-import About from './components/About'
-import Objectives from './components/Objectives'
 import EventsGrid from './components/EventsGrid'
 import AwardsSection from './components/AwardsSection'
+import CTASection from './components/CTASection'
 import Footer from './components/Footer'
 import CrackTheCodePage from './pages/CrackTheCodePage'
 import HackathonPage from './pages/HackathonPage'
@@ -15,10 +14,9 @@ function HomePage() {
   return (
     <>
       <Hero />
-      <About />
-      <Objectives />
       <EventsGrid />
       <AwardsSection />
+      <CTASection />
       <Footer />
     </>
   )
@@ -26,9 +24,9 @@ function HomePage() {
 
 function PlaceholderPage({ title }) {
   return (
-    <main className="min-h-screen bg-black px-4 py-20 text-center">
-      <h1 className="text-3xl font-bold text-white sm:text-5xl">{title}</h1>
-      <p className="mt-4 text-gray-400">Page under construction.</p>
+    <main className="min-h-screen bg-[#F8F9FA] px-4 py-20 text-center">
+      <h1 className="text-3xl font-bold text-[#0F172A] sm:text-5xl">{title}</h1>
+      <p className="mt-4 text-[#475569]">Page under construction.</p>
     </main>
   )
 }
@@ -45,7 +43,7 @@ function EventLayout({ children }) {
 function App() {
   return (
     <BrowserRouter>
-      <div className="dark">
+      <div>
         <Routes>
           <Route
             path="/"

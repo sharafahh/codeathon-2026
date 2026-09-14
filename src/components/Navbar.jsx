@@ -2,13 +2,12 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { Menu, X, Code2 } from 'lucide-react'
 import { navLinks } from '../data/events'
-
 export default function Navbar() {
   const [open, setOpen] = useState(false)
 
   return (
     <header
-      className="sticky top-0 z-50 border-b border-white/[0.06] bg-black/70 backdrop-blur-xl"
+      className="sticky top-0 z-50 border-b border-[#E2E8F0] bg-white"
       role="banner"
     >
       <nav
@@ -17,23 +16,23 @@ export default function Navbar() {
       >
         <Link
           to="/"
-          className="flex items-center gap-2.5 text-lg font-bold tracking-tight text-white"
+          className="flex items-center gap-3 text-xl font-bold tracking-tight text-[#0F172A]"
           aria-label="CODEATHON 2026 home"
         >
-          <span className="inline-flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-cyan-400 to-purple-500">
+          <span className="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-[#06b6d4]">
             <Code2 className="h-5 w-5 text-white" aria-hidden="true" />
           </span>
           <span>
-            CODEATHON<span className="text-cyan-400">2026</span>
+            CODEATHON<span className="text-[#06b6d4]">2026</span>
           </span>
         </Link>
 
-        <div className="hidden md:flex md:items-center md:gap-1">
+        <div className="hidden md:flex md:items-center md:gap-6 lg:gap-8">
           {navLinks.map((link) => (
             <a
               key={link.href}
               href={link.href}
-              className="rounded-md px-3 py-2 text-sm font-medium text-gray-400 transition-colors hover:bg-white/[0.04] hover:text-white focus:outline-none focus:ring-2 focus:ring-cyan-400/40 focus:ring-offset-2 focus:ring-offset-black"
+              className="text-sm font-medium text-[#475569] transition-colors hover:text-[#06b6d4] focus:outline-none focus:text-[#06b6d4]"
             >
               {link.label}
             </a>
@@ -43,7 +42,7 @@ export default function Navbar() {
         <div className="hidden md:block">
           <Link
             to="/register"
-            className="inline-flex items-center gap-2 rounded-lg bg-gradient-to-r from-cyan-500 to-purple-500 px-5 py-2.5 text-sm font-semibold text-white shadow-lg shadow-cyan-500/20 transition hover:shadow-cyan-500/30 focus:outline-none focus:ring-2 focus:ring-cyan-300 focus:ring-offset-2 focus:ring-offset-black"
+            className="inline-flex items-center rounded-lg bg-[#06b6d4] px-6 py-2.5 text-sm font-semibold text-white transition hover:bg-[#0891b2] focus:outline-none focus:ring-2 focus:ring-[#06b6d4]"
           >
             Register
           </Link>
@@ -51,7 +50,7 @@ export default function Navbar() {
 
         <button
           type="button"
-          className="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-white/[0.04] hover:text-white md:hidden"
+          className="inline-flex items-center justify-center rounded-lg p-2 text-[#475569] hover:bg-[#ecfeff] hover:text-[#06b6d4] md:hidden"
           aria-label="Toggle navigation menu"
           aria-expanded={open}
           onClick={() => setOpen((v) => !v)}
@@ -61,13 +60,13 @@ export default function Navbar() {
       </nav>
 
       {open && (
-        <div className="border-t border-white/[0.06] bg-black/95 md:hidden">
-          <div className="space-y-1 px-4 py-3">
+          <div className="border-t border-[#E2E8F0] bg-white md:hidden">
+            <div className="space-y-1 px-4 py-3">
             {navLinks.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
-                className="block rounded-md px-3 py-2.5 text-sm font-medium text-gray-400 hover:bg-white/[0.04] hover:text-white focus:outline-none focus:ring-2 focus:ring-cyan-400/40"
+                className="block rounded-lg px-3 py-3 text-sm font-medium text-[#475569] hover:bg-[#ecfeff] hover:text-[#06b6d4] focus:outline-none focus:text-[#06b6d4]"
                 onClick={() => setOpen(false)}
               >
                 {link.label}
@@ -75,7 +74,7 @@ export default function Navbar() {
             ))}
             <Link
               to="/register"
-              className="mt-2 block rounded-lg bg-gradient-to-r from-cyan-500 to-purple-500 px-3 py-2.5 text-center text-sm font-semibold text-white focus:outline-none focus:ring-2 focus:ring-cyan-300 focus:ring-offset-2 focus:ring-offset-black"
+              className="mt-2 block rounded-lg bg-[#06b6d4] px-3 py-3 text-center text-sm font-semibold text-white focus:outline-none focus:ring-2 focus:ring-[#06b6d4]"
               onClick={() => setOpen(false)}
             >
               Register

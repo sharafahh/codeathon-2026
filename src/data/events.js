@@ -1,0 +1,280 @@
+export const events = [
+  {
+    id: 1,
+    title: 'Crack the Code',
+    description:
+      "A programming competition that tests participants' ability to understand problems, develop algorithms, write correct programs, identify errors and produce efficient solutions within a limited time.",
+    icon: 'Code2',
+    date: 'Mar 14, 2026',
+    time: '09:00 AM - 05:00 PM',
+    category: 'Coding',
+    prize: 'Cash Prize TBD',
+    teams: 'Individual / 2 members',
+  },
+  {
+    id: 2,
+    title: 'Hackathon',
+    description:
+      'Identify a real-world problem and develop a technology-based solution within the event duration.',
+    icon: 'Rocket',
+    date: 'Mar 15, 2026',
+    time: '09:00 AM - 05:00 PM',
+    category: 'Software & Technology',
+    prize: 'Cash Prize TBD',
+    teams: '2–5 members',
+  },
+  {
+    id: 3,
+    title: 'TechForge',
+    description:
+      'A continuous hardware innovation hackathon for students of EEE, ECE, Mechanical and Civil Engineering.',
+    icon: 'CircuitBoard',
+    date: 'Mar 16, 2026',
+    time: '09:00 AM - 05:00 PM',
+    category: 'Hardware & Engineering',
+    prize: 'Cash Prize TBD',
+    teams: '2–4 members',
+  },
+];
+
+export const codeathonEvents = {
+  crackTheCode: {
+    slug: 'crack-the-code',
+    path: '/crack-the-code',
+    title: 'Crack the Code',
+    shortTitle: 'Crack the Code',
+    focus: 'Coding & Debugging',
+    tagline: "A programming competition that tests participants' ability to understand problems, develop algorithms, write correct programs, identify errors and produce efficient solutions within a limited time.",
+    teamSize: 'Individual or 2/team',
+    fee: 100,
+    feeLabel: '₹100 per participant',
+    icon: 'Code2',
+    gradient: 'from-blue-500 via-indigo-500 to-violet-500',
+    glow: 'glow-blue',
+    description: "A programming competition that tests participants' ability to understand problems, develop algorithms, write correct programs, identify errors and produce efficient solutions within a limited time.",
+    eligibility: 'Open to all engineering colleges/disciplines; individual or team of 2; valid college ID mandatory',
+    procedure: ['Code Sprint', 'Debugging Arena', 'Final Code Challenge', 'Ranking'],
+    domains: [],
+    rules: [
+      'One registration per participant',
+      'Must use organizer-specified languages/software',
+      'No copying/communication between teams',
+      'No phones/unauthorized devices',
+      'No unauthorized AI/internet help unless announced',
+      'Submit before deadline',
+      'Malpractice = disqualification',
+      "Evaluators' decision final",
+    ],
+    evaluation: [
+      { criterion: 'Correctness', weight: 40 },
+      { criterion: 'Problem-solving approach', weight: 25 },
+      { criterion: 'Code efficiency', weight: 15 },
+      { criterion: 'Debugging ability', weight: 10 },
+      { criterion: 'Time management', weight: 10 },
+    ],
+  },
+  hackathon: {
+    slug: 'hackathon',
+    path: '/hackathon',
+    title: 'Hackathon',
+    shortTitle: 'Hackathon',
+    focus: 'Software & Technology Innovation',
+    tagline: 'Identify a real-world problem and develop a technology-based solution within the event duration.',
+    teamSize: '2–5 members',
+    fee: 200,
+    feeLabel: '₹200 per participant',
+    icon: 'Rocket',
+    gradient: 'from-violet-500 via-fuchsia-500 to-cyan-500',
+    glow: 'glow-violet',
+    description: 'Identify a real-world problem and develop a technology-based solution within the event duration. Teams may build web apps, mobile apps, AI/ML solutions, IoT applications, cybersecurity solutions, or other innovative software.',
+    eligibility: 'All engineering colleges; team of 2–5; interdisciplinary encouraged; one nominated team leader',
+    procedure: [],
+    domains: [
+      'Open Innovation',
+      'AI & ML',
+      'Cybersecurity',
+      'EdTech',
+      'Healthcare',
+      'Smart Campus/Smart City',
+      'Agriculture',
+      'Sustainable Development',
+      'FinTech',
+      'IoT',
+      'Safety & Social Innovation',
+      'Environmental Protection',
+    ],
+    rules: [
+      'Team 2–5; no multi-team membership',
+      'Valid ID required',
+      'Substantial progress required',
+      'No plagiarism',
+      'Third-party APIs/libraries OK with credit',
+      'Must explain own contribution',
+      'Working demo mandatory',
+      'PPT/docs required before deadline',
+      'Jury decision final',
+    ],
+    evaluation: [
+      { criterion: 'Problem Identification', weight: 15 },
+      { criterion: 'Innovation', weight: 20 },
+      { criterion: 'Technical Implementation', weight: 25 },
+      { criterion: 'Functionality & Demo', weight: 15 },
+      { criterion: 'Impact & Scalability', weight: 10 },
+      { criterion: 'UI/UX', weight: 5 },
+      { criterion: 'Presentation & Q&A', weight: 10 },
+    ],
+  },
+  techforge: {
+    slug: 'techforge',
+    path: '/techforge',
+    title: 'TechForge',
+    shortTitle: 'TechForge',
+    focus: 'Hardware & Engineering Innovation',
+    tagline: 'A continuous hardware innovation hackathon for students of EEE, ECE, Mechanical and Civil Engineering.',
+    teamSize: '2–4 members',
+    fee: 200,
+    feeLabel: '₹200 per participant',
+    icon: 'CircuitBoard',
+    gradient: 'from-cyan-500 via-blue-500 to-violet-500',
+    glow: 'glow-cyan',
+    description: 'A continuous hardware innovation hackathon for students of EEE, ECE, Mechanical and Civil Engineering — not a level-based circuit competition. Teams identify an engineering problem, design a solution, build a prototype, test it and demonstrate the working model.',
+    eligibility: 'EEE/ECE/Mechanical/Civil students only; team 2–4; interdisciplinary encouraged; one team per participant',
+    procedure: [],
+    domains: [
+      'Open Innovation',
+      'Embedded Systems',
+      'IoT & Smart Automation',
+      'Energy & Power Solutions',
+      'EVs & Mobility',
+      'Robotics',
+      'Communication Systems',
+      'Safety Systems',
+      'Sustainable Engineering',
+      'Mechanical Automation',
+      'Smart Structures/Civil-Tech',
+      'Assistive Technology',
+      'Interdisciplinary Hardware Innovation',
+    ],
+    rules: [
+      'Team of 2–4',
+      'Only EEE/ECE/Mechanical/Civil students',
+      'Significant hardware component required',
+      'Approved components (microcontrollers, sensors, motors, communication modules, circuits, mechanical parts) with prior approval to bring them',
+      'Credit third-party/open-source resources',
+      'No plagiarism',
+      'Final prototype demoed before jury',
+      'Follow lab/electrical safety',
+      'High-voltage/mains work needs prior approval + faculty supervision',
+      'No unsafe experimentation/property damage',
+      'Jury decision final',
+    ],
+    evaluation: [
+      { criterion: 'Problem Relevance', weight: 10 },
+      { criterion: 'Innovation & Creativity', weight: 15 },
+      { criterion: 'Engineering Design', weight: 20 },
+      { criterion: 'Technical Implementation', weight: 20 },
+      { criterion: 'Working Prototype & Demo', weight: 20 },
+      { criterion: 'Practicality & Scalability', weight: 5 },
+      { criterion: 'Presentation & Q&A', weight: 10 },
+    ],
+  },
+};
+
+export const navLinks = [
+  { label: 'Home', href: '#home' },
+  { label: 'About', href: '#about' },
+  { label: 'Events', href: '#events' },
+  { label: 'Registration', href: '#registration' },
+  { label: 'Awards', href: '#awards' },
+];
+
+export const CONTACT_INFO = {
+  email: 'YOUR_EMAIL_HERE',
+  phone: 'YOUR_PHONE_HERE',
+  instagram: '#',
+  linkedin: '#',
+  website: '#',
+};
+
+export const COLLEGE_INFO = {
+  name: 'Your College Name',
+  accreditation: [
+    { label: 'NAAC', value: 'A+' },
+    { label: 'NBA', value: 'Accredited' },
+    { label: 'AICTE', value: 'Approved' },
+  ],
+};
+
+export const OBJECTIVES = [
+  {
+    title: 'Foster Innovation',
+    description:
+      'Encourage creative thinking and problem-solving among students from diverse engineering disciplines.',
+  },
+  {
+    title: 'Build Technical Skills',
+    description:
+      'Provide hands-on experience with cutting-edge technologies and real-world engineering challenges.',
+  },
+  {
+    title: 'Promote Collaboration',
+    description:
+      'Create a platform for inter-college teamwork, networking, and knowledge exchange.',
+  },
+  {
+    title: 'Bridge Industry & Academia',
+    description:
+      'Connect students with industry mentors and expose them to professional-grade development practices.',
+  },
+];
+
+export const awards = [
+  {
+    title: 'First Prize',
+    award: 'Certificate with Cash Prize',
+    amount: 'TBD',
+    color: 'text-yellow-400',
+  },
+  {
+    title: 'Second Prize',
+    award: 'Certificate with Cash Prize',
+    amount: 'TBD',
+    color: 'text-gray-300',
+  },
+  {
+    title: 'Third Prize',
+    award: 'Certificate with Cash Prize',
+    amount: 'TBD',
+    color: 'text-amber-600',
+  },
+  {
+    title: 'Participation Certificate',
+    award: 'Certificate',
+    color: 'text-indigo-400',
+  },
+  {
+    title: 'Internship Opportunities',
+    award: 'Internship',
+    color: 'text-emerald-400',
+  },
+  {
+    title: 'Best Innovation',
+    award: 'Special Recognition',
+    color: 'text-pink-400',
+  },
+  {
+    title: 'Best Technical Implementation',
+    award: 'Special Recognition',
+    color: 'text-pink-400',
+  },
+  {
+    title: 'Best Interdisciplinary Team',
+    award: 'Special Recognition',
+    color: 'text-pink-400',
+  },
+  {
+    title: 'Best Social Impact',
+    award: 'Special Recognition',
+    color: 'text-pink-400',
+  },
+];

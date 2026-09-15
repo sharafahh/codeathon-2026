@@ -43,6 +43,28 @@ export default function EventsGrid() {
             Three tracks across different domains. Teams can compete in one or
             combine skills across multiple tracks.
           </p>
+          <div className="mx-auto mt-8 max-w-sm rounded-2xl border border-[#06b6d4]/30 bg-[#ecfeff] px-8 py-5 shadow-sm">
+            <p className="text-4xl font-bold tracking-tight text-[#0891b2] sm:text-5xl">₹25,000</p>
+            <p className="mt-1 text-sm font-semibold uppercase tracking-[0.18em] text-[#475569]">Prize Pool</p>
+          </div>
+        </div>
+
+        <div className="mx-auto mt-10 grid max-w-5xl gap-4 sm:grid-cols-3 sm:gap-6">
+          <div className="rounded-xl border border-[#E2E8F0] bg-white px-6 py-5 text-center shadow-sm">
+            <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[#64748B]">First Prize</p>
+            <p className="mt-2 text-3xl font-bold text-[#0891b2]">₹5,000</p>
+            <p className="mt-1 text-sm text-[#475569]">For every event</p>
+          </div>
+          <div className="rounded-xl border border-[#E2E8F0] bg-white px-6 py-5 text-center shadow-sm">
+            <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[#64748B]">Second Prize</p>
+            <p className="mt-2 text-3xl font-bold text-[#0891b2]">₹2,500</p>
+            <p className="mt-1 text-sm text-[#475569]">For every event</p>
+          </div>
+          <div className="rounded-xl border border-[#E2E8F0] bg-white px-6 py-5 text-center shadow-sm">
+            <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[#64748B]">Special Recognition</p>
+            <p className="mt-2 text-3xl font-bold text-[#0891b2]">₹1,000</p>
+            <p className="mt-1 text-sm text-[#475569]">Two selected events</p>
+          </div>
         </div>
 
         <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3 lg:gap-8">

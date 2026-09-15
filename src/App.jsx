@@ -2,7 +2,6 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import EventsGrid from './components/EventsGrid'
-import AwardsSection from './components/AwardsSection'
 import CTASection from './components/CTASection'
 import Footer from './components/Footer'
 import CrackTheCodePage from './pages/CrackTheCodePage'
@@ -15,7 +14,6 @@ function HomePage() {
     <>
       <Hero />
       <EventsGrid />
-      <AwardsSection />
       <CTASection />
       <Footer />
     </>

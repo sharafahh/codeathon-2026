@@ -1,6 +1,7 @@
 export const events = [
   {
     id: 1,
+    path: '/crack-the-code',
     title: 'Crack the Code',
     description:
       "A programming competition that tests participants' ability to understand problems, develop algorithms, write correct programs, identify errors and produce efficient solutions within a limited time.",
@@ -8,32 +9,34 @@ export const events = [
     date: 'Mar 14, 2026',
     time: '09:00 AM - 05:00 PM',
     category: 'Coding',
-    prize: 'Cash Prize TBD',
     teams: 'Individual / 2 members',
+    fee: '₹100 per participant',
   },
   {
     id: 2,
+    path: '/hackathon',
     title: 'Hackathon',
     description:
-      'Identify a real-world problem and develop a technology-based solution within the event duration.',
+      'Identify a real-world problem and build a technology solution, from web or mobile apps to AI/ML, IoT and cybersecurity projects.',
     icon: 'Rocket',
     date: 'Mar 15, 2026',
     time: '09:00 AM - 05:00 PM',
     category: 'Software & Technology',
-    prize: 'Cash Prize TBD',
     teams: '2–5 members',
+    fee: '₹200 per participant',
   },
   {
     id: 3,
+    path: '/techforge',
     title: 'TechForge',
     description:
-      'A continuous hardware innovation hackathon for students of EEE, ECE, Mechanical and Civil Engineering.',
+      'Build and demonstrate a working engineering prototype for a real-world problem across EEE, ECE, Mechanical and Civil Engineering.',
     icon: 'CircuitBoard',
     date: 'Mar 16, 2026',
     time: '09:00 AM - 05:00 PM',
     category: 'Hardware & Engineering',
-    prize: 'Cash Prize TBD',
     teams: '2–4 members',
+    fee: '₹200 per participant',
   },
 ];
 
@@ -53,17 +56,22 @@ export const codeathonEvents = {
     glow: 'glow-blue',
     description: "A programming competition that tests participants' ability to understand problems, develop algorithms, write correct programs, identify errors and produce efficient solutions within a limited time.",
     eligibility: 'Open to all engineering colleges/disciplines; individual or team of 2; valid college ID mandatory',
-    procedure: ['Code Sprint', 'Debugging Arena', 'Final Code Challenge', 'Ranking'],
+    procedure: [
+      'Code Sprint — solve programming problems within the allotted time.',
+      'Debugging Arena — identify and correct syntax, logical, runtime and output errors.',
+      'Final Code Challenge — shortlisted participants solve advanced programming and problem-solving tasks.',
+      'Ranking — winners are determined by correctness, problems solved, efficiency and time.',
+    ],
     domains: [],
     rules: [
-      'One registration per participant',
-      'Must use organizer-specified languages/software',
-      'No copying/communication between teams',
-      'No phones/unauthorized devices',
-      'No unauthorized AI/internet help unless announced',
-      'Submit before deadline',
-      'Malpractice = disqualification',
-      "Evaluators' decision final",
+      'Each participant can register only once.',
+      'Participants must use the languages and software specified by the organizers.',
+      'Copying code or communicating with another team is prohibited.',
+      'Mobile phones and unauthorized electronic devices are not permitted during the competition.',
+      'Unauthorized use of AI tools, internet resources or external assistance is not permitted unless announced by the organizers.',
+      'Solutions must be submitted before the specified deadline.',
+      'Malpractice or unfair assistance will result in disqualification.',
+      'The decision of the evaluators will be final.',
     ],
     evaluation: [
       { criterion: 'Correctness', weight: 40 },
@@ -184,7 +192,6 @@ export const navLinks = [
   { label: 'Home', href: '#home' },
   { label: 'Events', href: '#events' },
   { label: 'Registration', href: '#registration' },
-  { label: 'Awards', href: '#awards' },
 ];
 
 export const CONTACT_INFO = {

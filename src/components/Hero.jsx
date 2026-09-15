@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom'
 import { ArrowRight, MapPin } from 'lucide-react'
-import { COLLEGE_INFO } from '../data/events'
 import Ferrofluid from './Ferrofluid'
 
 export default function Hero() {
@@ -76,22 +75,6 @@ export default function Hero() {
           Aalim Muhammed Salegh College of Engineering
         </a>
 
-        <div className="mx-auto mt-16 max-w-3xl rounded-lg border border-[#E2E8F0] bg-white p-4 sm:p-6 lg:p-8">
-          <p className="text-center text-xs font-medium uppercase tracking-[0.15em] text-[#64748B]">
-            Accreditations
-          </p>
-          <div className="mt-5 grid grid-cols-3 gap-3 sm:gap-4">
-            {COLLEGE_INFO.accreditation.map((item) => (
-              <div
-                key={item.label}
-                className="rounded-lg border border-[#E2E8F0] bg-white p-3 text-center transition hover:border-[#CBD5E1] sm:p-4"
-              >
-                <p className="text-sm font-semibold text-[#0F172A]">{item.label}</p>
-                <p className="mt-1 text-xs text-[#64748B]">{item.value}</p>
-              </div>
-            ))}
-          </div>
-        </div>
       </div>
     </section>
   )

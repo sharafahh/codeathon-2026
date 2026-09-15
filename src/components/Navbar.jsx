@@ -1,7 +1,8 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
-import { Menu, X, Code2 } from 'lucide-react'
+import { Menu, X } from 'lucide-react'
 import { navLinks } from '../data/events'
+import amsLogo from '../assets/ams-logo.jpg'
 export default function Navbar() {
   const [open, setOpen] = useState(false)
 
@@ -19,9 +20,11 @@ export default function Navbar() {
           className="flex items-center gap-3 text-xl font-bold tracking-tight text-[#0F172A]"
           aria-label="CODEATHON 2026 home"
         >
-          <span className="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-[#06b6d4]">
-            <Code2 className="h-5 w-5 text-white" aria-hidden="true" />
-          </span>
+          <img
+            src={amsLogo}
+            alt="Aalim Muhammed Salegh College of Engineering logo"
+            className="h-11 w-11 rounded-full border border-[#E2E8F0] bg-white object-contain p-0.5"
+          />
           <span>
             CODEATHON<span className="text-[#06b6d4]">2026</span>
           </span>

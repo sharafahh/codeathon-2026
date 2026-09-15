@@ -1,0 +1,9 @@
+.event-flip-card { display: grid; min-height: 100%; cursor: pointer; perspective: 1200px; outline: none; }
+.event-flip-card:focus-visible { border-radius: 0.75rem; box-shadow: 0 0 0 3px rgb(6 182 212 / 0.45); }
+.event-card-face { grid-area: 1 / 1; display: flex; min-height: 100%; flex-direction: column; border: 1px solid #E2E8F0; border-radius: 0.75rem; background: white; padding: 1.25rem; transition: transform 600ms cubic-bezier(0.2, 0.75, 0.25, 1), opacity 150ms linear 200ms; transform-style: preserve-3d; backface-visibility: hidden; -webkit-backface-visibility: hidden; }
+.event-card-front { border-left: 3px solid #06b6d4; }
+.event-card-back { border-left: 2px solid #06b6d4; transform: rotateY(180deg); pointer-events: none; opacity: 0; }
+.event-flip-card.is-flipped .event-card-front { transform: rotateY(-180deg); pointer-events: none; opacity: 0; }
+.event-flip-card.is-flipped .event-card-back { transform: rotateY(0deg); pointer-events: auto; opacity: 1; }
+@media (min-width: 640px) { .event-card-face { padding: 2rem; } }
+@media (prefers-reduced-motion: reduce) { .event-card-face { transition: opacity 150ms linear; } }

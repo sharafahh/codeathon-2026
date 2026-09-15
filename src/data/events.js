@@ -194,16 +194,8 @@ export const navLinks = [
   { label: 'Registration', href: '#registration' },
 ];
 
-export const CONTACT_INFO = {
-  email: 'YOUR_EMAIL_HERE',
-  phone: 'YOUR_PHONE_HERE',
-  instagram: '#',
-  linkedin: '#',
-  website: '#',
-};
-
 export const COLLEGE_INFO = {
-  name: 'Your College Name',
+  name: 'Aalim Muhammed Salegh College of Engineering',
   accreditation: [
     { label: 'NAAC', value: 'A+' },
     { label: 'NBA', value: 'Accredited' },

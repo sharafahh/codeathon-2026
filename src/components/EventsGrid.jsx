@@ -1,6 +1,40 @@
 import EventCard from './EventCard'
 import { events } from '../data/events'
 import Ferrofluid from './Ferrofluid'
+import { Lightbulb, GraduationCap, Users, Trophy, Rocket, Sparkles } from 'lucide-react'
+
+const experiences = [
+  {
+    title: 'Hands-on Innovation',
+    text: 'Prototype, build, and present real projects with your own team under pressure.',
+    icon: Lightbulb,
+  },
+  {
+    title: 'Expert Mentorship',
+    text: 'Get guidance and feedback from faculty and industry mentors throughout the day.',
+    icon: GraduationCap,
+  },
+  {
+    title: 'Networking',
+    text: 'Meet and collaborate with the brightest minds from colleges across the region.',
+    icon: Users,
+  },
+  {
+    title: 'Prizes & Recognition',
+    text: 'Compete for a ₹25,000 prize pool with awards across every track.',
+    icon: Trophy,
+  },
+  {
+    title: 'Student Driven',
+    text: 'A completely student-organized event built by students, for students.',
+    icon: Rocket,
+  },
+  {
+    title: 'Vibrant Atmosphere',
+    text: 'Live demos, friendly rivalry, and non-stop energy from check-in to podium.',
+    icon: Sparkles,
+  },
+]
 
 export default function EventsGrid() {
   return (
@@ -43,34 +77,38 @@ export default function EventsGrid() {
             Three tracks across different domains. Teams can compete in one or
             combine skills across multiple tracks.
           </p>
-          <div className="mx-auto mt-8 max-w-sm rounded-2xl border border-[#02A4FF]/30 bg-[#FFFFFF] px-8 py-5 shadow-sm">
-            <p className="text-4xl font-bold tracking-tight bg-gradient-to-r from-[#02A4FF] to-[#34D9B2] bg-clip-text text-transparent sm:text-5xl">₹25,000</p>
-            <p className="mt-1 text-sm font-semibold uppercase tracking-[0.18em] text-[#475569]">Prize Pool</p>
-          </div>
         </div>
 
-        <div className="mx-auto mt-10 grid max-w-5xl gap-4 sm:grid-cols-3 sm:gap-6">
-          <div className="rounded-xl border border-[#D6EAF0] bg-[#FFFFFF] px-6 py-5 text-center shadow-sm">
-            <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[#64748B]">First Prize</p>
-            <p className="mt-2 text-3xl font-bold text-[#02A4FF]">₹5,000</p>
-            <p className="mt-1 text-sm text-[#475569]">For every event</p>
-          </div>
-          <div className="rounded-xl border border-[#D6EAF0] bg-[#FFFFFF] px-6 py-5 text-center shadow-sm">
-            <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[#64748B]">Second Prize</p>
-            <p className="mt-2 text-3xl font-bold text-[#02A4FF]">₹2,500</p>
-            <p className="mt-1 text-sm text-[#475569]">For every event</p>
-          </div>
-          <div className="rounded-xl border border-[#D6EAF0] bg-[#FFFFFF] px-6 py-5 text-center shadow-sm">
-            <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[#64748B]">Special Recognition</p>
-            <p className="mt-2 text-3xl font-bold text-[#02A4FF]">₹1,000</p>
-            <p className="mt-1 text-sm text-[#475569]">Two selected events</p>
-          </div>
-        </div>
-
-        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3 lg:gap-8">
+        <div className="mt-12 grid items-stretch gap-6 sm:grid-cols-2 lg:grid-cols-3 lg:gap-8">
           {events.map((event, i) => (
             <EventCard key={event.id} event={event} index={i} />
           ))}
+        </div>
+
+        <div className="mx-auto mt-20 max-w-5xl" aria-labelledby="experience-heading">
+          <h2
+            id="experience-heading"
+            className="text-center text-3xl font-bold tracking-tight text-[#0F172A] sm:text-4xl"
+          >
+            The <span className="bg-gradient-to-r from-[#02A4FF] to-[#34D9B2] bg-clip-text text-transparent">Experience</span>
+          </h2>
+          <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3 lg:gap-6">
+            {experiences.map((exp) => {
+              const Icon = exp.icon
+              return (
+                <div
+                  key={exp.title}
+                  className="group rounded-xl border border-[#D6EAF0] bg-[#FFFFFF] p-6 shadow-sm transition hover:border-[#02A4FF]/30 hover:shadow-[0_10px_32px_rgba(2,164,255,0.16)]"
+                >
+                  <div className="inline-flex h-11 w-11 items-center justify-center rounded-lg bg-[#DCF0EE] text-[#02A4FF] transition group-hover:bg-gradient-to-r group-hover:from-[#02A4FF] group-hover:to-[#34D9B2] group-hover:text-white">
+                    <Icon className="h-5 w-5" aria-hidden="true" />
+                  </div>
+                  <h3 className="mt-4 text-lg font-semibold text-[#0F172A]">{exp.title}</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-[#475569]">{exp.text}</p>
+                </div>
+              )
+            })}
+          </div>
         </div>
       </div>
     </section>

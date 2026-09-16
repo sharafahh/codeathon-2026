@@ -3,6 +3,7 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
+  --font-sans: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
   --color-codeathon-primary: #02A4FF;
   --color-codeathon-surface: #FFFFFF;
   --color-codeathon-bg: #F7FBFF;

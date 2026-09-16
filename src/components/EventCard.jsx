@@ -19,7 +19,7 @@ export default function EventCard({ event, index }) {
   }
 
   return (
-    <ElectricBorder color="#02A4FF" chaos={0.08} speed={1} borderRadius={12} className={index === 0 ? 'sm:col-span-2 lg:col-span-2' : ''}>
+    <ElectricBorder color="#02A4FF" chaos={0.08} speed={1} borderRadius={12}>
       <div
         className={`event-flip-card ${isFlipped ? 'is-flipped' : ''}`}
         tabIndex="0"

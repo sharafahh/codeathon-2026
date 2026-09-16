@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useRef } from 'react'
 import './ElectricBorder.css'
 
-export default function ElectricBorder({ children, color = '#5227FF', speed = 1, chaos = 0.12, borderRadius = 24, className, style }) {
+export default function ElectricBorder({ children, color = '#02A4FF', speed = 1, chaos = 0.12, borderRadius = 24, className, style }) {
   const canvasRef = useRef(null)
   const containerRef = useRef(null)
   const animationRef = useRef(null)

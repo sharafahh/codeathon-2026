@@ -13,7 +13,7 @@ const hexToRGB = hex => {
 }
 
 const prepColors = input => {
-  const base = (input && input.length ? input : ['#4F46E5', '#06B6D4', '#E0F2FE']).slice(0, MAX_COLORS)
+  const base = (input && input.length ? input : ['#4FC1FF', '#34D9B2', '#0A6FB7']).slice(0, MAX_COLORS)
   const count = base.length
   const arr = []
   for (let i = 0; i < MAX_COLORS; i++) arr.push(hexToRGB(base[Math.min(i, base.length - 1)]))
@@ -191,7 +191,7 @@ const Ferrofluid = ({
   className,
   dpr,
   paused = false,
-  colors = ['#4F46E5', '#06B6D4', '#E0F2FE'],
+  colors = ['#4FC1FF', '#34D9B2', '#0A6FB7'],
   speed = 0.5,
   scale = 1.6,
   turbulence = 1,

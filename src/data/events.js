@@ -52,8 +52,8 @@ export const codeathonEvents = {
     fee: 100,
     feeLabel: '₹100 per participant',
     icon: 'Code2',
-    gradient: 'from-blue-500 via-indigo-500 to-violet-500',
-    glow: 'glow-blue',
+    gradient: 'from-[#02A4FF] via-[#FFFFFF] to-[#34D9B2]',
+    glow: 'glow-vermillion',
     description: "A programming competition that tests participants' ability to understand problems, develop algorithms, write correct programs, identify errors and produce efficient solutions within a limited time.",
     eligibility: 'Open to all engineering colleges/disciplines; individual or team of 2; valid college ID mandatory',
     procedure: [
@@ -92,8 +92,8 @@ export const codeathonEvents = {
     fee: 200,
     feeLabel: '₹200 per participant',
     icon: 'Rocket',
-    gradient: 'from-violet-500 via-fuchsia-500 to-cyan-500',
-    glow: 'glow-violet',
+    gradient: 'from-[#34D9B2] via-[#02A4FF] to-[#34D9B2]',
+    glow: 'glow-charcoal',
     description: 'Identify a real-world problem and develop a technology-based solution within the event duration. Teams may build web apps, mobile apps, AI/ML solutions, IoT applications, cybersecurity solutions, or other innovative software.',
     eligibility: 'All engineering colleges; team of 2–5; interdisciplinary encouraged; one nominated team leader',
     procedure: [],
@@ -143,8 +143,8 @@ export const codeathonEvents = {
     fee: 200,
     feeLabel: '₹200 per participant',
     icon: 'CircuitBoard',
-    gradient: 'from-cyan-500 via-blue-500 to-violet-500',
-    glow: 'glow-cyan',
+    gradient: 'from-[#34D9B2] via-[#34D9B2] to-[#02A4FF]',
+    glow: 'glow-peach',
     description: 'A continuous hardware innovation hackathon for students of EEE, ECE, Mechanical and Civil Engineering — not a level-based circuit competition. Teams identify an engineering problem, design a solution, build a prototype, test it and demonstrate the working model.',
     eligibility: 'EEE/ECE/Mechanical/Civil students only; team 2–4; interdisciplinary encouraged; one team per participant',
     procedure: [],
@@ -193,6 +193,17 @@ export const navLinks = [
   { label: 'Events', href: '#events' },
   { label: 'Registration', href: '#registration' },
 ];
+
+export const COORDINATORS = {
+  faculty: [
+    { name: 'Sukanya', phone: '+91 73058 10279' },
+  ],
+  students: [
+    { name: 'Arif Basha', phone: '+91 63838 59800' },
+    { name: 'Fizal Raja', phone: '+91 91235 38846' },
+    { name: 'Sharafah', phone: '8870037871' },
+  ],
+};
 
 export const COLLEGE_INFO = {
   name: 'Aalim Muhammed Salegh College of Engineering',

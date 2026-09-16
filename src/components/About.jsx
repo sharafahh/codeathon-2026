@@ -27,7 +27,7 @@ export default function About() {
   return (
     <section
       id="about"
-      className="bg-white px-4 py-20 sm:px-6 sm:py-24 lg:py-32"
+      className="bg-[#F7FBFF] px-4 py-20 sm:px-6 sm:py-24 lg:py-32"
       aria-labelledby="about-heading"
     >
       <div className="mx-auto max-w-6xl">
@@ -47,14 +47,14 @@ export default function About() {
 
         <div className="mt-12 grid gap-8 lg:grid-cols-2 lg:gap-16">
           <div>
-            <h3 className="text-sm font-semibold uppercase tracking-wider text-[#06b6d4]">
+            <h3 className="text-sm font-semibold uppercase tracking-wider text-[#02A4FF]">
               What to Expect
             </h3>
             <div className="mt-8 space-y-8">
               {highlights.map(({ icon: Icon, title, text }) => (
                 <div key={title} className="flex gap-3 sm:gap-4">
-                  <div className="flex h-9 w-9 flex-none items-center justify-center rounded-lg bg-[#ecfeff] sm:h-10 sm:w-10">
-                    <Icon className="h-4 w-4 text-[#06b6d4] sm:h-5 sm:w-5" aria-hidden="true" />
+                  <div className="flex h-9 w-9 flex-none items-center justify-center rounded-lg bg-[#DCF0EE] sm:h-10 sm:w-10">
+                    <Icon className="h-4 w-4 text-[#02A4FF] sm:h-5 sm:w-5" aria-hidden="true" />
                   </div>
                   <div>
                     <h4 className="text-base font-semibold text-[#0F172A]">{title}</h4>
@@ -67,7 +67,7 @@ export default function About() {
 
           <div className="space-y-12">
             <div>
-              <h3 className="text-sm font-semibold uppercase tracking-wider text-[#06b6d4]">
+              <h3 className="text-sm font-semibold uppercase tracking-wider text-[#02A4FF]">
                 Our Mission
               </h3>
               <p className="mt-4 text-[#475569]">
@@ -77,7 +77,7 @@ export default function About() {
             </div>
 
             <div>
-              <h3 className="text-sm font-semibold uppercase tracking-wider text-[#06b6d4]">
+              <h3 className="text-sm font-semibold uppercase tracking-wider text-[#02A4FF]">
                 How It Works
               </h3>
               <ol className="mt-4 space-y-5">
@@ -88,7 +88,7 @@ export default function About() {
                   ['Pitch & win', 'Present to judges and compete for prizes.'],
                 ].map(([step, desc], i) => (
                   <li key={step} className="flex gap-4">
-                    <span className="flex h-7 w-7 flex-none items-center justify-center rounded-full bg-[#ecfeff] text-sm font-semibold text-[#06b6d4] sm:h-8 sm:w-8">
+                    <span className="flex h-7 w-7 flex-none items-center justify-center rounded-full bg-[#DCF0EE] text-sm font-semibold text-[#02A4FF] sm:h-8 sm:w-8">
                       {i + 1}
                     </span>
                     <div>

@@ -7,6 +7,7 @@ import Footer from './components/Footer'
 import CrackTheCodePage from './pages/CrackTheCodePage'
 import HackathonPage from './pages/HackathonPage'
 import TechForgePage from './pages/TechForgePage'
+import SplashCursor from './components/SplashCursor'
 import './index.css'
 
 function HomePage() {
@@ -22,7 +23,7 @@ function HomePage() {
 
 function PlaceholderPage({ title }) {
   return (
-    <main className="min-h-screen bg-[#F8F9FA] px-4 py-20 text-center">
+    <main className="min-h-screen bg-[#F7FBFF] px-4 py-20 text-center">
       <h1 className="text-3xl font-bold text-[#0F172A] sm:text-5xl">{title}</h1>
       <p className="mt-4 text-[#475569]">Page under construction.</p>
     </main>
@@ -41,6 +42,13 @@ function EventLayout({ children }) {
 function App() {
   return (
     <BrowserRouter>
+      <SplashCursor
+        DENSITY_DISSIPATION={2.5}
+        PRESSURE={0.45}
+        COLOR_UPDATE_SPEED={16}
+        RAINBOW_MODE={false}
+        COLOR="#02A4FF"
+      />
       <div>
         <Routes>
           <Route

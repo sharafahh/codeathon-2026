@@ -12,12 +12,12 @@ export default function Objectives() {
   return (
     <section
       id="objectives"
-      className="bg-[#F8F9FA] px-4 py-16 sm:py-24"
+      className="bg-[#F7FBFF] px-4 py-16 sm:py-24"
       aria-labelledby="objectives-heading"
     >
       <div className="mx-auto max-w-7xl">
         <div className="mx-auto max-w-3xl text-center">
-          <span className="inline-flex items-center gap-2 rounded-full border border-[#E2E8F0] bg-white px-4 py-1.5 text-xs font-medium text-[#475569]">
+          <span className="inline-flex items-center gap-2 rounded-full border border-[#D6EAF0] bg-[#FFFFFF] px-4 py-1.5 text-xs font-medium text-[#475569]">
             Objectives
           </span>
           <h2
@@ -38,9 +38,9 @@ export default function Objectives() {
             return (
               <article
                 key={title}
-                className="group relative overflow-hidden rounded-lg border border-[#E2E8F0] bg-white p-6 transition hover:border-[#06b6d4]/30 hover:bg-[#ecfeff]"
+                className="group relative overflow-hidden rounded-lg border border-[#D6EAF0] bg-[#FFFFFF] p-6 transition hover:border-[#02A4FF]/30 hover:bg-[#DCF0EE]"
               >
-                <div className="inline-flex h-11 w-11 items-center justify-center rounded-lg bg-[#ecfeff] text-[#06b6d4]">
+                <div className="inline-flex h-11 w-11 items-center justify-center rounded-lg bg-[#DCF0EE] text-[#02A4FF]">
                   <Icon className="h-5 w-5" aria-hidden="true" />
                 </div>
                 <h3 className="mt-4 text-lg font-semibold text-[#0F172A]">{title}</h3>

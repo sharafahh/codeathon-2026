@@ -20,7 +20,7 @@ export default function AwardsSection() {
   return (
     <section
       id="awards"
-      className="bg-white px-4 py-20 sm:px-6 sm:py-24 lg:py-32"
+      className="bg-[#F7FBFF] px-4 py-20 sm:px-6 sm:py-24 lg:py-32"
       aria-labelledby="awards-heading"
     >
       <div className="mx-auto max-w-5xl">
@@ -47,12 +47,12 @@ export default function AwardsSection() {
               return (
                 <div key={award.title} className="text-center">
                   <div className="flex items-center justify-center gap-2">
-                    {Icon && <Icon className="h-5 w-5 text-[#06b6d4]" aria-hidden="true" />}
-                    <span className="text-sm font-medium uppercase tracking-wider text-[#06b6d4]">
+                    {Icon && <Icon className="h-5 w-5 text-[#02A4FF]" aria-hidden="true" />}
+                    <span className="text-sm font-medium uppercase tracking-wider text-[#02A4FF]">
                       {award.title}
                     </span>
                   </div>
-                  <p className="mt-4 text-4xl font-black tracking-tight text-[#06b6d4] sm:text-5xl md:text-6xl">
+                  <p className="mt-4 text-4xl font-black tracking-tight text-[#02A4FF] sm:text-5xl md:text-6xl">
                     {award.amount}
                   </p>
                     <p className="mt-3 text-sm font-medium uppercase tracking-wider text-[#64748B] sm:text-base">
@@ -73,8 +73,8 @@ export default function AwardsSection() {
               const Icon = iconMap[award.title]
               return (
                 <div key={award.title} className="flex items-center gap-4">
-                  <div className="flex h-9 w-9 flex-none items-center justify-center rounded-lg bg-[#ecfeff] sm:h-10 sm:w-10">
-                    {Icon && <Icon className="h-5 w-5 text-[#06b6d4]" aria-hidden="true" />}
+                  <div className="flex h-9 w-9 flex-none items-center justify-center rounded-lg bg-[#DCF0EE] sm:h-10 sm:w-10">
+                    {Icon && <Icon className="h-5 w-5 text-[#02A4FF]" aria-hidden="true" />}
                   </div>
                   <div>
                     <p className="text-base font-semibold text-[#0F172A]">{award.title}</p>

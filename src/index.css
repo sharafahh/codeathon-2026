@@ -3,21 +3,22 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
-  --color-codeathon-primary: #06b6d4;
+  --color-codeathon-primary: #02A4FF;
   --color-codeathon-surface: #FFFFFF;
-  --color-codeathon-bg: #F8F9FA;
-  --color-codeathon-border: #E2E8F0;
+  --color-codeathon-bg: #F7FBFF;
+  --color-codeathon-border: #D6EAF0;
 }
 
 @layer base {
   * {
-    @apply border-[#E2E8F0];
+    @apply border-[#D6EAF0];
   }
   html,
   body {
-    @apply bg-[#F8F9FA] text-[#0F172A] antialiased;
+    @apply text-[#0F172A] antialiased;
     margin: 0;
     height: 100%;
+    background: #FFFFFF;
   }
   #root {
     width: 100%;
@@ -25,6 +26,7 @@
   }
   .dark html,
   .dark body {
-    @apply bg-[#F8F9FA] text-[#0F172A];
+    @apply text-[#0F172A];
+    background: #FFFFFF;
   }
 }

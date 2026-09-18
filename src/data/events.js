@@ -181,7 +181,11 @@ export const codeathonEvents = {
 export const navLinks = [
   { label: 'Home', href: '#home' },
   { label: 'Events', href: '#events' },
-  { label: 'Registration', href: '#registration' },
+  { label: 'Why Us', href: '#why' },
+  { label: 'Prizes', href: '#prizes' },
+  { label: 'Schedule', href: '#timeline' },
+  { label: 'FAQ', href: '#faq' },
+  { label: 'Contact', href: '#contact' },
 ];
 
 export const COORDINATORS = {

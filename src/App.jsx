@@ -1,8 +1,16 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
+import EventSnapshot from './components/EventSnapshot'
 import EventsGrid from './components/EventsGrid'
+import WhyCodeathon from './components/WhyCodeathon'
+import Countdown from './components/Countdown'
+import Prizes from './components/Prizes'
+import Internship from './components/Internship'
+import Timeline from './components/Timeline'
+import FAQ from './components/FAQ'
 import CTASection from './components/CTASection'
+import Contact from './components/Contact'
 import Footer from './components/Footer'
 import CrackTheCodePage from './pages/CrackTheCodePage'
 import HackathonPage from './pages/HackathonPage'
@@ -14,8 +22,16 @@ function HomePage() {
   return (
     <>
       <Hero />
+      <EventSnapshot />
       <EventsGrid />
+      <WhyCodeathon />
+      <Countdown />
+      <Prizes />
+      <Internship />
+      <Timeline />
+      <FAQ />
       <CTASection />
+      <Contact />
       <Footer />
     </>
   )
@@ -23,9 +39,9 @@ function HomePage() {
 
 function PlaceholderPage({ title }) {
   return (
-    <main className="min-h-screen bg-[#F7FBFF] px-4 py-20 text-center">
-      <h1 className="text-3xl font-bold text-[#0F172A] sm:text-5xl">{title}</h1>
-      <p className="mt-4 text-[#475569]">Page under construction.</p>
+    <main className="min-h-screen bg-white px-4 py-20 text-center">
+      <h1 className="text-3xl font-bold text-[#0B1B33] sm:text-5xl">{title}</h1>
+      <p className="mt-4 text-[#33475B]">Page under construction.</p>
     </main>
   )
 }

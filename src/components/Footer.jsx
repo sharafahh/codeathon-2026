@@ -1,117 +1,72 @@
 import { Link } from 'react-router-dom'
-import { Code2, MapPin, Heart, GraduationCap, Users, Phone } from 'lucide-react'
-import { COLLEGE_INFO, COORDINATORS } from '../data/events'
-
-function CoordinatorCard({ name, role, phone, icon: Icon }) {
-  const initials = name
-    .split(' ')
-    .map((part) => part[0])
-    .join('')
-    .slice(0, 2)
-    .toUpperCase()
-
-  return (
-    <div className="w-full rounded-xl border border-[#D6EAF0] bg-[#FFFFFF] p-5 shadow-sm transition hover:border-[#02A4FF]/40 hover:shadow-md">
-      <div className="flex items-center gap-3">
-        <span className="inline-flex h-11 w-11 flex-none items-center justify-center rounded-full bg-[#DCF0EE] text-sm font-bold text-[#02A4FF]">
-          {initials}
-        </span>
-        <div className="min-w-0">
-          <p className="truncate font-semibold text-[#0F172A]">{name}</p>
-          <p className="mt-0.5 flex items-center gap-1 text-xs font-medium uppercase tracking-wider text-[#64748B]">
-            <Icon className="h-3 w-3" aria-hidden="true" />
-            {role}
-          </p>
-        </div>
-      </div>
-      <a
-        href={`tel:${phone.replace(/\s/g, '')}`}
-        className="mt-3 inline-flex items-center gap-1.5 rounded-md bg-[#DCF0EE] px-3 py-1.5 text-xs font-semibold text-[#0A6FB7] transition hover:bg-[#02A4FF] hover:text-white focus:outline-none focus:ring-2 focus:ring-[#02A4FF]/30"
-      >
-        <Phone className="h-3 w-3" aria-hidden="true" />
-        {phone}
-      </a>
-    </div>
-  )
-}
-
-function CoordinatorGroup({ title, icon: Icon, details, role }) {
-  return (
-    <div>
-      <h3 className="flex items-center gap-2 text-sm font-semibold uppercase tracking-wider text-[#0F172A]">
-        <Icon className="h-4 w-4 text-[#34D9B2]" aria-hidden="true" />
-        {title}
-      </h3>
-      <div className="mt-4 grid gap-4 sm:grid-cols-2">
-        {details.map(({ name, phone }) => (
-          <CoordinatorCard
-            key={name}
-            name={name}
-            phone={phone}
-            role={role}
-            icon={Icon}
-          />
-        ))}
-      </div>
-    </div>
-  )
-}
+import { Code2, Heart, MapPin } from 'lucide-react'
+import { COLLEGE_INFO, navLinks } from '../data/events'
 
 export default function Footer() {
   return (
     <footer
-      className="border-t border-[#D6EAF0] bg-[#F7FBFF] px-4 py-12 sm:px-6"
+      className="border-t border-[#E3EEF5] bg-[#F7FBFF] px-4 py-12 sm:px-6"
       role="contentinfo"
     >
       <div className="mx-auto max-w-7xl">
-        <div className="flex flex-col items-center text-center">
-          <Link
-            to="/"
-            className="flex items-center gap-2.5 text-lg font-bold tracking-tight text-[#0F172A]"
-            aria-label="CODEATHON 2026 home"
-          >
-            <span className="inline-flex h-8 w-8 items-center justify-center rounded-md bg-gradient-to-r from-[#02A4FF] to-[#34D9B2]">
-              <Code2 className="h-5 w-5 text-white" aria-hidden="true" />
-            </span>
-            <span>
-              CODEATHON<span className="bg-gradient-to-r from-[#02A4FF] to-[#34D9B2] bg-clip-text text-transparent">2026</span>
-            </span>
-          </Link>
-          <p className="mt-4 max-w-sm text-sm text-[#475569]">
-            {COLLEGE_INFO.name}
-          </p>
-          <div className="mt-4 flex items-center gap-1.5 text-sm text-[#475569]">
-            <MapPin className="h-3.5 w-3.5" aria-hidden="true" />
-            <span>{COLLEGE_INFO.name}</span>
+        <div className="grid gap-10 md:grid-cols-3">
+          <div>
+            <Link
+              to="/"
+              className="flex items-center gap-3 text-lg font-bold tracking-tight text-[#0B1B33]"
+              aria-label="CODEATHON 2026 home"
+            >
+              <span className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-r from-[#02A4FF] to-[#34D9B2]">
+                <Code2 className="h-5 w-5 text-white" aria-hidden="true" />
+              </span>
+              <span>
+                CODEATHON
+                <span className="bg-gradient-to-r from-[#02A4FF] to-[#34D9B2] bg-clip-text text-transparent">
+                  2026
+                </span>
+              </span>
+            </Link>
+            <p className="mt-4 max-w-xs text-sm leading-relaxed text-[#33475B]">
+              An inter-college technical innovation challenge, run by students,
+              for students.
+            </p>
+          </div>
+
+          <div className="md:justify-self-center">
+            <h2 className="text-sm font-semibold uppercase tracking-[0.16em] text-[#0B1B33]">
+              Explore
+            </h2>
+            <ul className="mt-4 space-y-2.5">
+              {navLinks.map((link) => (
+                <li key={link.href}>
+                  <a
+                    href={link.href}
+                    className="text-sm text-[#33475B] transition hover:text-[#02A4FF] focus:outline-none focus:text-[#02A4FF]"
+                  >
+                    {link.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div className="md:justify-self-end">
+            <h2 className="text-sm font-semibold uppercase tracking-[0.16em] text-[#0B1B33]">
+              Hosted by
+            </h2>
+            <p className="mt-4 flex items-start gap-2 text-sm leading-relaxed text-[#33475B]">
+              <MapPin className="mt-0.5 h-4 w-4 flex-none text-[#02A4FF]" aria-hidden="true" />
+              {COLLEGE_INFO.name}
+            </p>
           </div>
         </div>
 
-        <div className="mt-12 border-t border-[#D6EAF0] pt-10">
-          <h2 className="text-center text-lg font-bold tracking-tight text-[#0F172A]">
-            Coordinators
-          </h2>
-          <div className="mt-8 grid gap-10 lg:grid-cols-2">
-            <CoordinatorGroup
-              title="Faculty Coordinators"
-              icon={GraduationCap}
-              details={COORDINATORS.faculty}
-              role="Faculty Coordinator"
-            />
-            <CoordinatorGroup
-              title="Student Coordinators"
-              icon={Users}
-              details={COORDINATORS.students}
-              role="Student Coordinator"
-            />
-          </div>
-        </div>
-
-        <div className="mt-10 flex flex-col items-center justify-between gap-4 border-t border-[#D6EAF0] pt-8 sm:flex-row">
-          <p className="flex items-center justify-center gap-1.5 text-xs text-[#94A3B8]">
+        <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-[#D6EAF0] pt-8 sm:flex-row">
+          <p className="flex items-center justify-center gap-1.5 text-xs text-[#64748B]">
             Built with <Heart className="h-3 w-3 text-[#34D9B2]" aria-hidden="true" /> by students for
             students &middot; CODEATHON 2026
           </p>
-          <p className="text-xs text-[#94A3B8]">
+          <p className="text-xs text-[#64748B]">
             &copy; 2026 {COLLEGE_INFO.name}. All rights reserved.
           </p>
         </div>

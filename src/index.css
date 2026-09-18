@@ -4,30 +4,76 @@
 
 @theme {
   --font-sans: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+
   --color-codeathon-primary: #02A4FF;
+  --color-codeathon-secondary: #34D9B2;
+  --color-codeathon-navy: #0B1B33;
+  --color-codeathon-ink: #33475B;
+  --color-codeathon-muted: #64748B;
   --color-codeathon-surface: #FFFFFF;
   --color-codeathon-bg: #F7FBFF;
-  --color-codeathon-border: #D6EAF0;
+  --color-codeathon-border: #E3EEF5;
+  --color-codeathon-soft: #F0F8FC;
 }
 
 @layer base {
   * {
-    @apply border-[#D6EAF0];
+    @apply border-[#E3EEF5];
   }
   html,
   body {
-    @apply text-[#0F172A] antialiased;
+    @apply text-[#0B1B33] antialiased;
     margin: 0;
     height: 100%;
     background: #FFFFFF;
+    scroll-behavior: smooth;
   }
   #root {
     width: 100%;
     min-height: 100vh;
   }
+  ::selection {
+    background: rgba(2, 164, 255, 0.18);
+  }
   .dark html,
   .dark body {
-    @apply text-[#0F172A];
+    @apply text-[#0B1B33];
     background: #FFFFFF;
+  }
+}
+
+@layer components {
+  .section-eyebrow {
+    @apply inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.22em] text-[#02A4FF];
+  }
+  .section-eyebrow::before {
+    content: "";
+    @apply h-px w-7 bg-gradient-to-r from-[#02A4FF] to-[#34D9B2];
+  }
+  .section-eyebrow--center::after {
+    content: "";
+    @apply h-px w-7 bg-gradient-to-r from-[#34D9B2] to-[#02A4FF];
+  }
+  .section-title {
+    @apply mt-5 text-3xl font-black tracking-tight text-[#0B1B33] sm:text-4xl lg:text-5xl;
+  }
+  .section-copy {
+    @apply mt-5 text-base leading-relaxed text-[#33475B] sm:text-lg;
+  }
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-[#02A4FF] to-[#34D9B2] px-7 py-3.5 text-sm font-semibold text-white shadow-[0_10px_24px_-10px_rgba(2,164,255,0.65)] transition hover:from-[#0195E8] hover:to-[#26C2A0] hover:shadow-[0_14px_28px_-12px_rgba(2,164,255,0.7)] focus:outline-none focus:ring-2 focus:ring-[#02A4FF] focus:ring-offset-2 focus:ring-offset-[#FFFFFF];
+  }
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl border border-[#D6EAF0] bg-white px-7 py-3.5 text-sm font-semibold text-[#0B1B33] transition hover:border-[#02A4FF]/40 hover:bg-[#F0F8FC] focus:outline-none focus:ring-2 focus:ring-[#02A4FF]/30 focus:ring-offset-2 focus:ring-offset-[#FFFFFF];
+  }
+  .card-soft {
+    @apply rounded-2xl border border-[#E3EEF5] bg-white shadow-[0_14px_40px_-24px_rgba(11,27,51,0.16)];
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html,
+  body {
+    scroll-behavior: auto;
   }
 }

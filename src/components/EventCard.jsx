@@ -6,7 +6,7 @@ import './EventCard.css'
 
 const iconMap = { Code2, Rocket, CircuitBoard }
 
-export default function EventCard({ event, index }) {
+export default function EventCard({ event }) {
   const [isFlipped, setIsFlipped] = useState(false)
   const Icon = iconMap[event.icon]
   const toggleCard = () => setIsFlipped((flipped) => !flipped)
